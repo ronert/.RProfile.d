@@ -40,8 +40,8 @@ new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"
 if(length(new.packages)) install.packages(new.packages)
 
 ## Default Packages
-old <- getOption("defaultPackages")
-options(defaultPackages = c(old, list.of.packages))
+# old <- getOption("defaultPackages")
+# options(defaultPackages = c(old, list.of.packages))
 
 # Update Packages
 update.packages(ask=FALSE)
