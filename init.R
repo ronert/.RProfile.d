@@ -5,9 +5,6 @@ local({
   options(repos = r)
 })
 
-## Default packages
-R_DEFAULT_PACKAGES='utils,grDevices,graphics,stats,ggplot2,reshape,plyr,sqldf'
-
 ## First and last things to do
 .First <- function() cat("
    Welcome to R Ronert!
@@ -36,12 +33,14 @@ list.of.packages <- c("ggplot2", "reshape", "reshape2", "lubridate", "plyr",
                       "iterators", "unknownR", "DPpackage",
                       "fitdistrplus", "IBrokers", "mlbench",
                       "heatmap.plus", "FNN", "vars", "memoise",
-                      "MHadaptive", "RgoogleMaps", "klaR", "tree")
+                      "MHadaptive", "RgoogleMaps", "klaR", "tree",
+                      "rggobi", "classifly", "clusterfly", "meifly",
+                      "profr", "ProjectTemplate")
 new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
 if(length(new.packages)) install.packages(new.packages)
 
-## tikzDevice for org-export
+## Default Packages
 old <- getOption("defaultPackages")
-options(defaultPackages = c(old, "tikzDevice"))
+options(defaultPackages = c(old, list.of.packages))
 
 message("\n******************************\nSuccessfully loaded init.R\n******************************")
