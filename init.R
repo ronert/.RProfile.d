@@ -43,6 +43,9 @@ if(length(new.packages)) install.packages(new.packages)
 old <- getOption("defaultPackages")
 options(defaultPackages = c(old, list.of.packages))
 
+# Update Packages
+update.packages(ask=FALSE)
+
 # Some useful aliases
 cd <- setwd
 pwd <- getwd
