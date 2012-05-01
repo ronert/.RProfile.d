@@ -43,4 +43,9 @@ if(length(new.packages)) install.packages(new.packages)
 old <- getOption("defaultPackages")
 options(defaultPackages = c(old, list.of.packages))
 
+# Some useful aliases
+cd <- setwd
+pwd <- getwd
+lss <- dir
+
 message("\n******************************\nSuccessfully loaded init.R\n******************************")
