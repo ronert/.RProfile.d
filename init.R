@@ -17,7 +17,7 @@ local({
 
 ## Check and install packages
 library(utils)
-list.of.packages <- c("ggplot2", "reshape", "reshape2", "lubridate", "plyr",
+list.of.packages <- c("devtools", "ggplot2", "reshape", "reshape2", "lubridate", "plyr",
                       "stringr",  "digest", "mutatr", "brew",
                       "testthat", "sinartra", "helpr",  "RCurl",
                       "Rcpp", "XML", "MASS", "RTextTools", "tikzDevice",
@@ -47,5 +47,11 @@ options(defaultPackages = c(old, list.of.packages))
 cd <- setwd
 pwd <- getwd
 lss <- dir
+
+# Override q() to not save by default.
+# Same as saying q("no")
+q <- function (save="no", ...) {
+  quit(save=save, ...)
+}
 
 message("\n******************************\nSuccessfully loaded init.R\n******************************")
