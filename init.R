@@ -35,7 +35,7 @@ list.of.packages <- c("devtools", "ggplot2", "reshape", "reshape2", "lubridate",
                       "heatmap.plus", "FNN", "vars", "memoise",
                       "MHadaptive", "RgoogleMaps", "klaR", "tree",
                       "rggobi", "classifly", "clusterfly", "meifly",
-                      "profr", "ProjectTemplate")
+                      "profr", "ProjectTemplate", "makeR")
 new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
 if(length(new.packages)) install.packages(new.packages)
 
