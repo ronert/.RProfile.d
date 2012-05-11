@@ -5,16 +5,6 @@ local({
   options(repos = r)
 })
 
-## First and last things to do
-.First <- function() cat("
-   Welcome to R Ronert!
-
-")
-.Last <- function()  cat("
-   Goodbye -.-!
-
-")
-
 ## Check and install packages
 library(utils)
 list.of.packages <- c("devtools", "ggplot2", "reshape", "reshape2", "lubridate", "plyr",
@@ -35,7 +25,9 @@ list.of.packages <- c("devtools", "ggplot2", "reshape", "reshape2", "lubridate",
                       "heatmap.plus", "FNN", "vars", "memoise",
                       "MHadaptive", "RgoogleMaps", "klaR", "tree",
                       "rggobi", "classifly", "clusterfly", "meifly",
-                      "profr", "ProjectTemplate", "makeR", "benchmark")
+                      "profr", "ProjectTemplate", "makeR",
+                      "benchmark", "ElemStatLearn", "mclust",
+                      "flexmix", "magic")
 new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
 if(length(new.packages)) install.packages(new.packages)
 
