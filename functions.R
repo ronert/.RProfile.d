@@ -328,6 +328,15 @@ na.roughfix <- function (object=NULL, ...) {
   else stop("Object is not a data frame or atomic vector")
 }
 
+# Display/extract regression coefficients
+coef.lme <- function(mod){
+    res <- data.frame(
+        "Beta.CI" = paste(round(summary(mod)$coefficients$fixed, 3), " (",round(summary(mod)$coefficients$fixed-1.96*sqrt(diag(mod$varFix)), 2), ",", round(summary(mod)$coefficients$fixed+1.96*sqrt(diag(mod$varFix)), 2),")", sep=""),
+        "P.value" = round(2 * pt(-abs(summary(mod)$coefficients$fixed/sqrt(diag(mod$varFix))), summary(mod)$fixDF[[1]]), 3)
+    )
+    return(res)
+}
+
 #########
 ## End ##
 #########
