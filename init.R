@@ -29,7 +29,8 @@ list.of.packages <- c("devtools", "ggplot2", "reshape", "reshape2", "lubridate",
                       "benchmark", "ElemStatLearn", "mclust",
                       "flexmix", "magic", "lars", "nnet", "maxLik",
                       "TeachingDemos", "googleVis", "rainbow",
-                      "orderbook", "segue", "party", "hints", "mvtnorm")
+                      "orderbook", "segue", "party", "hints",
+                      "mvtnorm", "formatR", "mboost")
 new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
 if(length(new.packages)) install.packages(new.packages)
 
