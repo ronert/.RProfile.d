@@ -30,7 +30,17 @@ list.of.packages <- c("devtools", "ggplot2", "reshape", "reshape2", "lubridate",
                       "flexmix", "magic", "lars", "nnet", "maxLik",
                       "TeachingDemos", "googleVis", "rainbow",
                       "orderbook", "segue", "party", "hints",
-                      "mvtnorm", "formatR", "mboost", "ggmap", "MCMCpack")
+                      "mvtnorm", "formatR", "mboost", "ggmap",
+                      "MCMCpack", "ada", "Boruta", "bst", "caTools",
+                      "class", "Cubist", "earth", "elasticnet",
+                      "ellipse", "evtree", "fastICA", "foba", "gam",
+                      "GAMens", "gbm", "glmnet", "grid", "hda",
+                      "HDclassif", "ipred", "kernlab", "klaR",
+                      "kohonen", "KRLS", "lars", "leaps",
+                      "LogicForest", "logicFS", "LogicReg", "mboost", "mda", "mgcv", "mlbench", "neuralnet", "nnet", "nodeHarvest", "obliqueRF", "pamr", "partDSA", "party",
+                      "penalized", "penalizedLDA", "pls", "pROC", "proxy", "qrnn", "quantregForest", "randomForest", "RANN", "rda", "relaxo",
+                      "rFerns", "rocc", "rpart", "rrcov", "RRF", "rrlda", "RSNNS", "RWeka",
+                      "sda", "SDDA", "sparseLDA", "spls", "stepPlr", "superpc", "vbmp")
 new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
 if(length(new.packages)) install.packages(new.packages)
 
