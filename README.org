@@ -1,1 +1,8 @@
 * rbeamer - A Beamer modification for my presentations
+** Requirements
+- TeXLive 2011 or newer
+- Calibri and Cambria Math fonts
+- [[http://pygments.org/][Pygments]]
+** Installation
+** Compiling
+Compile with \texttt{xelatex --shell-escape example.tex}
