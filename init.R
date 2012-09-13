@@ -33,7 +33,8 @@ list.of.packages <- c("devtools", "ggplot2", "reshape", "reshape2", "lubridate",
 "pROC", "proxy", "qrnn", "quantregForest", "randomForest", "RANN",
 "rda", "relaxo", "rFerns", "rocc", "rpart", "rrcov", "RRF", "rrlda",
 "RSNNS", "RWeka", "sda", "SDDA", "sparseLDA", "spls", "stepPlr",
-  "superpc", "vbmp", "arules", "arulesViz", "doMC", "gregmisc")
+  "superpc", "vbmp", "arules", "arulesViz", "doMC", "gregmisc",
+                      "rdatamrket", "datamart")
 
 new.packages <- list.of.packages[!(list.of.packages %in%
                                    installed.packages()[,"Package"])]
