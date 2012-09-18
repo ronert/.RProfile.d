@@ -373,3 +373,9 @@ coef.lme <- function(mod){
 ## End ##
 #########
 message("\n******************************\nSuccessfully loaded functions.R\n******************************")
+
+
+#####################
+## Display Fortune ##
+#####################
+library(fortunes); fortune(sample(1:nrow(read.fortunes()),1));
