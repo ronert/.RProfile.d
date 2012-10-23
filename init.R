@@ -35,7 +35,7 @@ list.of.packages <- c("devtools", "ggplot2", "reshape", "reshape2", "lubridate",
 "RSNNS", "RWeka", "sda", "SDDA", "sparseLDA", "spls", "stepPlr",
   "superpc", "vbmp", "arules", "arulesViz", "doMC", "doParallel", "gregmisc",
                       "rdatamrket", "datamart", "RUnit", "stargazer",
-                      "unknownR", "catdata")
+                      "unknownR", "catdata", "SMC", "dlm", "SPARQL")
 
 new.packages <- list.of.packages[!(list.of.packages %in%
                                    installed.packages()[,"Package"])]
