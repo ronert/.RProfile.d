@@ -1,7 +1,7 @@
 ## Chose repository
 local({
   r <- getOption("repos")
-  r["CRAN"] <- "http://cran.rakanu.com/"
+  r["CRAN"] <- "http://cran.rstudio.com/"
   options(repos = r)
 })
 
