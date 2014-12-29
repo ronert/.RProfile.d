@@ -513,3 +513,14 @@ message("\n******************************\nSuccessfully loaded functions.R\n****
 ## library(fortunes);
 ## message(fortune(sample(1:nrow(read.fortunes()),1)))
 ## message("\n")
+
+#################
+## Open iTerm  ##
+#################
+iterm <- function(directory=getwd()) {
+
+  system(paste("osascript -e 'activate application \"iTerm\"' ",
+               " -e 'tell application \"System Events\" to keystroke \"t\" using command down' ",
+               sprintf(" -e 'tell application \"iTerm\" to tell session -1 of current terminal to write text \"cd %s\"'", directory)))
+
+}
